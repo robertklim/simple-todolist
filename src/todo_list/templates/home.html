@@ -18,13 +18,13 @@
             {% for todo in all_items %}
                 {% if todo.completed %}
                     <tr class="table-secondary">
-                        <td class="striker">{{ todo.item }}</td>
+                        <td class="striker"><a href="{% url 'edit' todo.id %}">{{ todo.item }}</a></td>
                         <td><center><a href="{% url 'uncross' todo.id %}">uncross</a></center></td>
                         <td><center><a href="{% url 'delete' todo.id %}">delete</a></center></td>
                     </tr>
                 {% else %}
                     <tr>
-                        <td>{{ todo.item }}</td>
+                        <td><a href="{% url 'edit' todo.id %}">{{ todo.item }}</a></td>
                         <td><center><a href="{% url 'cross' todo.id %}">cross off</a></center></td>
                         <td><center><a href="{% url 'delete' todo.id %}">delete</a></center></td>
                     </tr>
