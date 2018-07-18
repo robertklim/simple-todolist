@@ -19,7 +19,7 @@
                     <tr>
                         <td>{{ todo.item }}</td>
                         <td><center>{{ todo.completed }}</center></td>
-                        <td><center>delete</center></td>
+                        <td><center><a href="{% url 'delete' todo.id %}">delete</a></center></td>
                     </tr>
             {% endfor %}
         </table>
